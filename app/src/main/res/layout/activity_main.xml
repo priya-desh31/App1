@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative1"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+
+  //searchview to display search bar
+  <SearchView
+      android:id="@+id/search"
+      android:layout_width="355dp"
+      android:layout_height="28dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="16dp"
+      android:background="@drawable/roundedcorner">
+
+  </SearchView>
+
+// RelativeLayout for user1 profile with image ,name
+  <RelativeLayout
+      android:id="@+id/relative2"
+      android:layout_width="238dp"
+      android:layout_height="120dp"
+      android:layout_below="@id/search"
+      android:layout_marginTop="-12dp"
+      android:gravity="start"
+      android:paddingLeft="40dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image1"
+
+
+        android:layout_width="66dp"
+        android:layout_height="60dp"
+        android:src="@drawable/user1">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/image1"
+        android:gravity="center"
+
+
+        android:text="Abhey Sharma"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+
+
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="63dp"
+        android:layout_height="34dp"
+        android:layout_below="@id/image1"
+        android:layout_marginTop="6dp"
+        android:text="    hello"
+        android:textSize="15dp">
+
+    </TextView>
+
+
+  </RelativeLayout>
+
+
+
+
+  <LinearLayout
+      android:id="@+id/linear1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/relative2"
+      android:orientation="vertical">
+
+    <EditText
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg1"
+        android:text="   h                                                         0%">
+
+
+    </EditText>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="315dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        android:background="@drawable/bg2"
+        android:textAllCaps="false"
+        android:text=" vb                                                                 100%"
+        >
+
+    </TextView>
+
+
+
+
+  </LinearLayout>
+
+//Relativelayout for user2 profile
+  <RelativeLayout
+      android:id="@+id/relative3"
+      android:layout_width="match_parent"
+      android:layout_height="170dp"
+      android:layout_below="@+id/linear1"
+      android:layout_marginTop="20dp"
+      android:gravity="start"
+      android:paddingLeft="40dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image2"
+
+
+        android:layout_width="66dp"
+        android:layout_height="60dp"
+        android:src="@drawable/user">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/image2"
+        android:gravity="center"
+
+
+        android:text="Anonymous User"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+
+
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textviewhtml"
+        android:layout_width="348dp"
+        android:layout_height="77dp"
+        android:layout_below="@id/image2"
+        android:layout_marginTop="14dp"
+        android:paddingLeft="40dp">
+
+    </TextView>
+
+
+  </RelativeLayout>
+
+ // RelativeLayout for user3 profile
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="400dp"
+      android:layout_below="@+id/relative3"
+      android:layout_marginTop="15dp"
+      android:gravity="start"
+      android:paddingLeft="40dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image3"
+
+
+        android:layout_width="66dp"
+        android:layout_height="60dp"
+        android:src="@drawable/user2">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/image3"
+        android:gravity="center"
+
+
+        android:text="Vivek Bhardwaj"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+
+
+        android:textStyle="bold">
+
+    </TextView>
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_below="@id/image3"
+        android:background="@drawable/fathersdayimg">
+
+    </ImageView>
+
+
+  </RelativeLayout>
+
+
+//Bottom Navigation Bar
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+      android:id="@+id/bottomnavi"
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:background="#D9D9D9"
+
+
+      app:menu="@menu/navitems">
+
+  </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>
+
